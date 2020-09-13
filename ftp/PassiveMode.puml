@@ -5,6 +5,7 @@ newpage: 制御コネクション
 Client -> Server: 21番ポートで接続
 note left: ランダムポート\n(aポート)
 Server -> Client: 認証してaポートで返答する
+Server -> Client: アクセスしてよいbポートを知らせる
 note right: 21番ポート
 
 newpage: データコネクション
