@@ -1,0 +1,30 @@
+@startuml
+title: ActiveMode(PORTモード)
+
+newpage: 制御コネクション
+Client -> Server: 21番ポートで接続
+note left: ランダムポート\n(aポート)
+Server -> Client: aポートで返却
+note right: 21番ポート
+
+newpage: データコネクション
+
+Server -[#blue]>x Client: ランダムなポート(b)で接続
+note left: bポートが開いていない！
+@enduml
+
+@startuml
+title: ActiveMode(PORTモード)
+
+newpage: 制御コネクション
+Client -> Server: 21番ポートで接続
+note left: ランダムポート\n(aポート)
+Server -> Client: aポートで返却
+note right: 21番ポート
+
+newpage: データコネクション
+
+Server -[#blue]> Client: ランダムなポート(b)で接続
+Client -[#blue]> Server: 20番ポートで返却
+
+@enduml

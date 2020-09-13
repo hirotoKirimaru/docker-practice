@@ -1,0 +1,17 @@
+@startuml
+title: PassiveMode(PASVモード)
+
+newpage: 制御コネクション
+Client -> Server: 21番ポートで接続
+note left: ランダムポート\n(aポート)
+Server -> Client: 認証してaポートで返答する
+note right: 21番ポート
+
+newpage: データコネクション
+
+Client -[#blue]> Server: サーバが通知したbポートで接続する
+note left: ランダムポート\n(cポート)
+note right: bポート
+Server -[#blue]> Client: cポートで返答する
+
+@enduml
